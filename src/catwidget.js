@@ -51,7 +51,8 @@ const Widget = (props) => {
             if(Array.isArray(data) && data.length >= 1) {
                 const catBreeds = data.sort((catA, catB) => {
                     // just sort them by some propertys, but not random,
-                    // because we want always the same sequence
+                    // because we want always the same sequence,
+                    // but not only alphabetical order.
                     const catScoreA = catA.affection_level + catA.dog_friendly - catA.health_issues - catA.social_needs;
                     const catScoreB = catB.adaptability + catB.energy_level - catB.hairless - catB.shedding_level;
                     return catScoreA - catScoreB;
