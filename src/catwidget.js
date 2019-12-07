@@ -22,8 +22,6 @@ const Widget = (props) => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log("imagedata", data);
-
             const {
                 url = null,
             } = data[0];
@@ -75,7 +73,6 @@ const Widget = (props) => {
     if(!catOfTheDay) {
         return <h4>Loading...</h4>
     }
-    console.log("catOfTheDay", catOfTheDay);
 
     const {
         name,
